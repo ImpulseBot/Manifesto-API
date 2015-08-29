@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20150822012404) do
 
-  create_table "comments", force: :cascade do |t|
+  create_table "comments", force: true do |t|
     t.string   "author"
     t.integer  "manifesto_id", null: false
     t.text     "body"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20150822012404) do
 
   add_index "comments", ["manifesto_id"], name: "index_comments_on_manifesto_id"
 
-  create_table "manifestos", force: :cascade do |t|
+  create_table "manifestos", force: true do |t|
     t.string   "name"
     t.string   "organizer"
     t.integer  "happiness",  default: 0

@@ -1,4 +1,4 @@
-Rails.application.routes.draw do
+ManifestoApi::Application.routes.draw do
   get '/manifestos', to: 'manifestos#index'
   get '/manifestos/:id', to: 'manifestos#show'
   get '/manifestos/trending', to: 'manifestos#trending'

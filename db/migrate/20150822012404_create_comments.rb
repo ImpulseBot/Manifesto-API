@@ -7,6 +7,5 @@ class CreateComments < ActiveRecord::Migration
     	t.timestamps null: false
     	t.index :manifesto_id
     end
-    add_foreign_key :comments, :manifestos
   end
 end
