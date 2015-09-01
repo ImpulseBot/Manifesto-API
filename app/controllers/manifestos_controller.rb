@@ -19,6 +19,15 @@ class ManifestosController < ApplicationController
 		end
 	end
 
+	def destroy
+    @manifesto = Manifesto.find(params[:id])
+    if @manifesto.destroy
+    	render :json => '{success: "Manifesto successfully destroyed"}'
+    else
+    	render :json => '{failure: "Manifesto not destroyed"}'
+    end
+	end
+
 	def trending
 		@manifestos = Manifesto.trending
 		if @manifestos
