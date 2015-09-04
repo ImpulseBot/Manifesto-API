@@ -1,4 +1,4 @@
-class ManifestosController < ApplicationController
+class Api::V1::ManifestosController < ApplicationController
 	
 	def index
 		@manifestos = Manifesto.all

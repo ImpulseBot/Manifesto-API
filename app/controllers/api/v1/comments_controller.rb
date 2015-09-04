@@ -1,4 +1,4 @@
-class CommentsController < ApplicationController
+class Api::V1::CommentsController < ApplicationController
 	
 	def index
 		@comments = Comment.where(manifesto_id: params['manifesto_id'])
